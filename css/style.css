@@ -9693,3 +9693,32 @@ h4, h5, h6 {
   padding: 0;
   list-style-type: none;
 }
+ <style>
+    /* Additional CSS for tooltip */
+    .fi {
+      position: relative;
+      display: inline-block;
+      margin-right: 10px; /* Adjust as needed */
+    }
+    
+    .fi::after {
+      content: attr(data-country);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: 12px;
+      border-radius: 3px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .fi:hover::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
