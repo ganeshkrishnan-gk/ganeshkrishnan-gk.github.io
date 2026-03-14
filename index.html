@@ -1,467 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Ganesh krishnan - Portfolio</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GK | Security Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',sans-serif;background:#0a0f2c;color:#fff;min-height:100vh;}
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+  /* NAV */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;position:fixed;width:100%;top:0;z-index:100;background:rgba(10,15,44,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);}
+  .logo{font-size:1.6rem;font-weight:700;color:#fff;}
+  .logo span{color:#e63946;}
+  .nav-links a{color:#ddd;text-decoration:none;margin-left:28px;font-size:.95rem;transition:.2s;}
+  .nav-links a:hover{color:#e63946;}
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Poppins&display=swap" rel="stylesheet"> 
+  /* HERO */
+  .hero{min-height:100vh;display:flex;align-items:center;padding:0 60px;position:relative;overflow:hidden;}
 
-        <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="styles.css">
- 
-        <!-- Flags --> 
-		<link href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" rel="stylesheet"/>
-		
-		
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  /* Background image via JS-injected inline style */
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:0;}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,8,30,.88) 50%,rgba(10,20,70,.55) 100%);z-index:1;}
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+  .hero-text{z-index:2;position:relative;max-width:520px;}
+  .hero-text p{font-size:1.1rem;color:#aab4d8;margin-bottom:8px;}
+  .hero-text h1{font-size:3.2rem;font-weight:800;line-height:1.15;margin-bottom:8px;}
+  .hero-text h1 span{color:#e63946;}
+  .hero-text h2{font-size:1.4rem;font-weight:400;color:#aab4d8;margin-bottom:30px;}
+  .hero-text h2 strong{color:#e63946;font-weight:700;}
+  .btn-contact{display:inline-block;padding:13px 34px;background:#e63946;color:#fff;border-radius:5px;font-size:1rem;font-weight:600;text-decoration:none;transition:.2s;}
+  .btn-contact:hover{background:#c1121f;}
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <div class="wrapper">
-            <div class="sidebar">
-                <div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
-                    <img class="w-100 img-fluid mb-4" id="profile-pic" src="img/profile12.jpg" alt="Profile Image">
-					<script src="js/script.js"></script>
-                    <h4 class="mt-2">Ganesh "GK" Krishnan</h4>
-                    <div class="mb-4" style="height: 22px;">
-                        <h5 class="typed-text-output d-inline-block text-body"></h5>
-                        <div class="typed-text d-none">Network Security Engineer, Information Security Engineer, Cyber Security Engineer </div>
-                    </div>
-                    <div class="d-flex justify-content-center mb-1">
-							<a class="mx-2" href="https://www.linkedin.com/in/kg13/" target="”_blank”""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="d-flex align-items-end justify-content-between">
-                        <a class="btn btn-block border-right" href="doc/Sr_Network_Security_Engineer.pdf" target="_blank" >Download CV</a>
-                        <a class="btn btn-block btn-scroll" href="https://www.linkedin.com/in/kg13/" target="_blank">Contact Me</a>
-                    </div>
-                </div>
-                <div class="sidebar-icon d-flex flex-column h-100 justify-content-center text-right">
-                    <i class="fas fa-2x fa-angle-double-right text-primary"></i>
-                </div>
-            </div>
-            <div class="content">
-                <!-- About Start -->
-                <div class="container bg-white py-5">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">About Me</h2>
-                        </div>
-                        <div class="col-12">
-                            <p>Security Professional with over a decade of expertise in the industry, specializing in the design, deployment, and maintenance of robust security solutions, particularly in the realm of network security. Proven adaptability to new products and technologies, tailoring solutions to meet the unique demands of each organization. </p>
-							<p>My expansive experience across diverse fields—including networking, firewall, proxy, load balancing, VPN, and troubleshooting allows me to approach challenges with a holistic perspective. This unique quality distinguishes my problem-solving approach and facilitates the delivery of effective solutions. </p>
-							<p>Driven by a commitment to continuous growth, I am a passionate professional with a strategic vision to evolve into a Security Architect. Operating as a reliable security specialist, I collaborate seamlessly with cross-functional teams, providing invaluable technical security guidance and consultation. My focus on network security best practices underscores my dedication to ensuring robust and resilient security postures for organizations. </p>
-                            <div class="row">
-                                <div class="col-sm-11 py-3">
-                                    <i class="fas fa-graduation-cap"></i> MSc in Cyber Forensic & Information Security
-                                </div> 
-                                <div class="col-sm-7 py-3">
-                                    <i class="fas fa-briefcase"></i> 13+ Years
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- About End -->
+  /* STATS */
+  .stats{display:flex;gap:40px;margin-top:40px;}
+  .stat h3{font-size:2rem;font-weight:800;color:#e63946;}
+  .stat p{font-size:.8rem;color:#aab4d8;margin-top:2px;}
 
-				<!-- Credentials Start -->
-                 <div class="container bg-white py-5">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">Credentials</h2>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">CISSP</p>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">SSCP</p>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">ISC2 CC</p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">AZ900</p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">RHCSA</p>
-                                </div>
-                            </div>
-						</div>
-						<div class="col-sm-4">
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">ITIL</p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">CompTIA Security+</p>
-                                </div>
-                            </div>                    
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">C|EH</p>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">ZCCA</p>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">PCNSE</p>
-                                </div>
-                            </div>
-						</div>	
-						<div class="col-sm-4">
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">JNCIA</p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">CCSA</p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">CCNP - ASA </p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">CCNA Security</p>
-                                </div>
-                            </div>
-							<div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">CCNA</p>
-                                </div>
-							</div>		
-                        </div>
-                    </div>
-                </div>
-				<!-- Credentials End -->
-				
-                <!-- Skills Start -->
-                <div class="container bg-white py-5">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">Skills</h2>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Switching & Routing</p>
-                                    <p class="mb-2">80%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Multivendor Firewall</p>
-                                    <p class="mb-2">85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Cloud Proxy</p>
-                                    <p class="mb-2">90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">VPN Technologies</p>
-                                    <p class="mb-2">80%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Holistic Approach in Troubleshooting</p>
-                                    <p class="mb-2">90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <p class="mb-2">Information Security</p>
-                                    <p class="mb-2">80%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Skills End -->
+  /* SCROLL HINT */
+  .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:#aab4d8;font-size:.8rem;z-index:2;}
+  .scroll-dot{width:8px;height:8px;border-radius:50%;background:#e63946;animation:bounce 1.4s infinite;}
+  @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+</style>
+</head>
+<body>
 
-         <!-- Services Start -->
-                <div class="container bg-white pt-5 pb-3">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">Why Me?</h2>
-                        </div>
-                        <div class="col-md-6 service-item text-center mb-3">
-                            <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                            <h5 class="mb-2">Security Engineer</h5>
-                            <p>Experienced in designing and deploying robust security solutions, specializing in strategic implementation and defensive measures.</p>
-                        </div>
-                        <div class="col-md-6 service-item text-center mb-3">
-                            <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                            <h5 class="mb-2">Network Security Proficiency</h5>
-                            <p>Proficient in networking, firewall, VPN, intrusion detection systems, proxy and load balancer to ensure secure and resilient network environments.</p>
-                        </div>
-                        <div class="col-md-6 service-item text-center mb-3">
-                            <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                            <h5 class="mb-2">Security Practitioner </h5>
-                            <p>Seasoned in delivering effective security solutions, collaborating across teams to fortify defenses and ensure organizational resilience.</p>
-                        </div>
-						<div class="col-md-6 service-item text-center mb-3">
-                            <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                            <h5 class="mb-2">Business-Centric</h5>
-                            <p>Focuses on integrating business considerations into decisions and actions, ensuring alignment with business objectives and priorities.</p>
-                        </div>
-						<div class="col-md-6 service-item text-center mb-3">
-                            <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                            <h5 class="mb-2">Holistic Approach</h5>
-                            <p>Exceptional ability to approach troubleshooting and analysis holistically, offering unique insights and solutions to complex security challenges.</p>
-                        </div>
-						<div class="col-md-6 service-item text-center mb-3">
-                            <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                            <h5 class="mb-2">Cyber Security Enthusiast</h5>
-                            <p>Passionate about advancing cyber defense strategies, committed to continuous learning and implementing effective security measures.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Services End --> 
-				
-                <!-- Education Start -->
-                <div class="container bg-white py-5">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">Expericence</h2>
-                        </div>
-                        <div class="col-12">
-                            <div class="border-left border-primary pt-2 pl-4 ml-2">
-                                <div class="position-relative mb-4">
-                                    <i class="fa fa-arrow-right text-primary position-absolute" style="top: 3px; left: -24px;"></i>
-                                    <h5 class="mb-1">Information Security Analyst </h5>
-                                    <p class="mb-2">Bp Plc | <small>2019 - Present </small> <span class="fi fi-sg" data-country="Singapore"></span></p>
-                                    <p>Led transformation and architectural roadmaps for web content filtering and remote access solutions. Contributed strategic insights, driving implementation. Defined operational objectives, formulated work plans, and provided technical guidance. Resolved complex technical challenges, mitigating persistent network security concerns.</p>
-                                </div>
-                                <div class="position-relative mb-4">
-                                    <i class="fa fa-arrow-right text-primary position-absolute" style="top: 3px; left: -24px;"></i>
-                                    <h5 class="mb-1">Security Delivery Specialist</h5>
-                                    <p class="mb-2">IBM | <small>2017 - 2019 </small><span class="fi fi-in" data-country="India"></span></p>
-                                    <p>Implemented customer security changes, prioritizing their security posture. Managed high-severity customer issues with ownership and support during escalations. Served as subject matter expert (SME) for Cisco and Vyatta firewalls, ensuring effective firewall management and support.</p>
-                                </div>
-                                <div class="position-relative mb-4">
-                                    <i class="fa fa-arrow-right text-primary position-absolute" style="top: 3px; left: -24px;"></i>
-                                    <h5 class="mb-1">Security Analyst</h5>
-                                    <p class="mb-2">Verizon Data Limited Services | <small>2014 - 2017 </small><span class="fi fi-in" data-country="India"></span></p>
-                                    <p>Applied hands-on expertise in implementing, administering, and troubleshooting diverse security devices including Cisco, Checkpoint, Palo Alto, FortiGate, Juniper firewalls; Websense, Bluecoat, Zscaler web filtering; and Big-IP F5 load balancers. Executed change management, translated business requirements, configured IPSEC VPNs, and conducted security analysis aligned with standards and SIEM-triggered investigations.</p>
-									<div class="position-relative mb-4">
-                                    <i class="fa fa-arrow-right text-primary position-absolute" style="top: 3px; left: -24px;"></i>
-                                    <h5 class="mb-1">Technical Lead</h5>
-                                    <p class="mb-2">Cognizant | <small>2011 - 2014 </small><span class="fi fi-in" data-country="India"></span></p>
-                                    <p>Examined LAN, WAN, and security requirements for infrastructure projects. Orchestrated planning, implementation, and maintenance of LAN/WAN networks and related service changes. Resolved high-priority tickets promptly, managed lower-priority incidents within SLAs. Mentored team members, fostering professional growth. Maintained thorough documentation for network and security infrastructure.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Education End -->
-                
-                <!-- Portfolio Start  
-                <div class="container bg-white pt-5 pb-3">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">Benefaction</h2>
-                        </div>
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-12 text-center mb-2">
-                                    <ul class="list-inline mb-4" id="portfolio-flters">
-                                        <li class="btn btn-outline-primary active"  data-filter="*"><i class="fa fa-star mr-2"></i>All</li>
-                                        <li class="btn btn-outline-primary" data-filter=".first">ISC2 SSCP</li>
-                                        <li class="btn btn-outline-primary" data-filter=".second">ISC2 CISSP</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row portfolio-container">
-                                <div class="col-md-6 mb-4 portfolio-item first">
-                                    <div class="position-relative overflow-hidden mb-2">
-                                        <img class="img-fluid w-50" src="img/portfolio-1.jpg" alt="">
-                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                                <i class="fa fa-4x fa-plus text-white"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4 portfolio-item second">
-                                    <div class="position-relative overflow-hidden mb-2">
-                                        <img class="img-fluid w-50" src="img/portfolio-2.jpg" alt="">
-                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                                <i class="fa fa-4x fa-plus text-white"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 Portfolio End -->
+<nav>
+  <div class="logo">Port<span>fo</span>lio.</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</nav>
 
-<!-- Testimonial Start -->
-                <div class="container bg-white py-5">
-                    <div class="row px-3">
-                        <div class="col-12">
-                            <h2 class="title position-relative pb-2 mb-4">Testimonial</h2>
-                        </div>
-                        <div class="col-12">
-                            <div class="owl-carousel testimonial-carousel">
-                                <div class="text-left">
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h5 class="text-body mb-4">I had the pleasure of working closely with Ganesh for few years, and I can attest to his exceptional expertise in network security. He was the point of contact as SME for various technological solutions within the Global SOC operations.I've had the privilege of witnessing his expertise in action, particularly in network security, cyber security and IAM. Ganesh's ability to adapt to new technologies and tailor solutions to meet overseas client unique requirements has been remarkable. He is a reliable team player who excels in providing technical security guidance and consultation with ease of enjoying every task provided and strives for successful completion with a positive attitude.</h5>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                                        <div class="pl-3">
-                                            <a href="https://www.linkedin.com/in/sudharsun-govindan-40221a22/" target="”_blank”"><h5 class="text-primary m-0">Sudharsun Govindan</h5></a>
-                                            <i>Senior Manager at Enel Green Power, CISSP, CISA, ISO 27001 </i>
-                                        </div>
-                                    </div>
-                                </div> 
-								<div class="text-left">
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="text-body mb-4">Ganesh is a highly motivated person and a person with great attitude. He is a person who gets easily adapted to changes and a person who strives his best to learn new things which helps to do his work in the best way. He has great leadership skills and he always helps people around him. He has a great passion for technology. He always makes people around him feel comfortable working with him.It is wonderful working with Ganesh and he is a great addition to any team. </h4>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                                        <div class="pl-3">
-                                            <a href="https://www.linkedin.com/in/kalaivani-nandhagopal-79b35715" target="”_blank”"><h5 class="text-primary m-0">Kalaivani Nandhagopal</h5></a>
-                                            <i>Vice President at Deutsche Bank - Global Network Implementation Engineer</i>
-                                        </div>
-                                    </div>
-							</div>
-								<div class="text-left">
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="text-body mb-4">Working alongside GK has been transformative experience. I’ve learned to handle challenging issues in an interactive and engaging manner, making complex problems manageable. GK's deep expertise in networking and security is exceptional, and his practical approach has been invaluable. I can confidently vouch for his profound knowledge and mentorship. Highly recommend GK for any role requiring expertise in these fields.</h4>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                                        <div class="pl-3">
-                                              <a href="https://www.linkedin.com/in/lukesh-jeevanandam-09936821" target="”_blank”"><h5 class="text-primary m-0">Lukesh Jeevanandam</h5></a>
-                                            <i>Staff Network Engineer at LinkedIn</i>
-                                        </div>
-                                    </div>
-                            </div>
-								<div class="text-left">	
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="text-body mb-4">I worked with GK collaborating with a couple projects . He is not only engaged in core roles but also puts efforts for extra projects aligned with a sharp increase in customer happiness.He is a smart individual and humble.This rare mix of productivity and ambition sets a great example for the rest of the team.</h4>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                                        <div class="pl-3">
-                                            <a href="https://www.linkedin.com/in/deepak-singh-150889" target="”_blank”"><h5 class="text-primary m-0">Deepak Singh</h5></a>
-                                            <i>Assistant Consultant at Tata Consultancy Services, F5 CA </i>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="text-left">	
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="text-body mb-4">Ganesh Krishnan is a great techie and used to support all the security environments that we worked on. He’s a goto person for any challenges.Keep up your great work and have a wonderful way forward.</h4>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                                        <div class="pl-3">
-                                            <a href="https://www.linkedin.com/in/thirunavukarasu-veerappan/" target="”_blank”"><h5 class="text-primary m-0">thirunavukarasu veerappan</h5></a>
-                                            <i>Sr Network Security Consultant at HCL Tech </i>
-                                        </div>
-                                    </div>
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <!-- Testimonial End -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
 
- 
-                <!-- Footer Start -->
-                <div class="container-fluid bg-white pt-5 px-0">
-                    <div class="container bg-dark text-light text-center py-5">				
-					<div class="d-flex justify-content-center mb-3">
-                            <h3 class="text-white">Ganesh "GK" Krishnan</h3>
-                    </div>
-                        <div class="d-flex justify-content-center mb-4">				
-							<a class="btn btn-outline-primary btn-square mr-2" href="https://www.linkedin.com/in/kg13/" target="”_blank”"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <div class="d-flex justify-content-center mb-3">
-                        </div>
-                        <p class="m-0">&copy; All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
-                    </div>
-                </div>
-                <!-- Footer End -->
-            </div>
-        </div>
-        
-        <!-- Back to Top -->
-        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <div class="hero-text">
+    <p>Hello, my name is</p>
+    <h1>Ganesh Krishnan</h1>
+    <h2>And I'm an <strong>Information Security Professional</strong></h2>
+    <a href="https://www.linkedin.com/in/kg13/" target="_blank" class="btn-contact">Contact Me</a>
+    <div class="stats">
+      <div class="stat"><h3>15+</h3><p>Years Experience</p></div>
+      <div class="stat"><h3>15+</h3><p>Certifications</p></div>
+      <div class="stat"><h3>4+</h3><p>Companies</p></div>
+    </div>
+  </div>
 
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-dot"></div>
+  </div>
+</section>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+<script>
+  // Load the image uploaded by the user and set as background
+  const bg = document.getElementById('heroBg');
+  const sources = [
+    'img/hero-bg.jpg',
+  ];
+
+  function tryLoad(i){
+    if(i >= sources.length) return;
+    const img = new Image();
+    img.onload = () => { bg.style.backgroundImage = `url('${sources[i]}')`; };
+    img.onerror = () => tryLoad(i+1);
+    img.src = sources[i];
+  }
+  tryLoad(0);
+</script>
+</body>
 </html>

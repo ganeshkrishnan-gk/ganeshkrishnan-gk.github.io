@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GK | About Me</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',sans-serif;background:#f4f6fb;color:#222;display:flex;flex-direction:column;min-height:100vh;}
+
+  /* NAV */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:#111;position:sticky;top:0;z-index:100;}
+  .logo{font-size:1.5rem;font-weight:700;color:#fff;}
+  .logo span{color:#e63946;}
+  .nav-links a{color:#ccc;text-decoration:none;margin-left:26px;font-size:.95rem;transition:.2s;}
+  .nav-links a:hover,.nav-links a.active{color:#e63946;}
+
+  /* OUTER WRAPPER — centres sidebar+content together */
+  .page-outer{flex:1;display:flex;justify-content:center;background:#f4f6fb;}
+  .page-wrap{display:flex;width:100%;max-width:1200px;}
+
+  /* SIDEBAR */
+  .sidebar{width:260px;min-width:260px;background:#fff;border-right:1px solid #e8e8e8;padding:36px 20px;position:sticky;top:61px;height:calc(100vh - 61px);overflow-y:auto;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;}
+  .sidebar img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid #e8e8e8;display:block;margin:0 auto 14px;}
+  .sidebar h2{font-size:1.05rem;font-weight:700;color:#111;margin-bottom:12px;text-align:center;width:100%;}
+  .sidebar-divider{width:40px;height:2px;background:#18a15e;margin:0 auto 18px;}
+  .btn-contact{display:block;width:100%;padding:9px;border-radius:4px;font-size:.85rem;font-weight:600;text-decoration:none;text-align:center;border:1.5px solid #bbb;color:#444;transition:.2s;margin:0 auto 20px;}
+  .btn-contact:hover{border-color:#18a15e;color:#18a15e;}
+  .sidebar-meta{width:100%;text-align:left;}
+  .meta-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#aaa;margin:0 0 6px 2px;}
+  .meta-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid #f2f2f2;font-size:.78rem;color:#555;line-height:1.5;}
+  .meta-item:last-child{border-bottom:none;}
+  .meta-item i{color:#18a15e;width:13px;margin-top:2px;flex-shrink:0;}
+  .meta-item strong{color:#333;font-size:.78rem;}
+
+  /* MAIN CONTENT */
+  .main{flex:1;padding:40px 20px;background:#f4f6fb;overflow-y:auto;}
+  .main-inner{max-width:860px;margin:0 auto;width:100%;}
+
+  /* SECTIONS */
+  .section{background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:18px;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+  .section-title{font-size:1.2rem;font-weight:700;color:#111;margin-bottom:6px;}
+  .section-line{width:40px;height:3px;background:#18a15e;border-radius:2px;margin-bottom:18px;}
+
+  /* PROFESSIONAL SUMMARY */
+  .summary p{font-size:.93rem;color:#444;line-height:1.85;margin-bottom:14px;}
+  .summary p:last-child{margin-bottom:0;}
+
+  /* CREDENTIALS */
+  .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;}
+  .cred-item{background:#f8f8f8;border:1px solid #eee;border-radius:6px;padding:9px 10px;font-size:.82rem;font-weight:600;color:#222;text-align:center;}
+
+  /* TECHNICAL SKILLS */
+  .skills-table{width:100%;border-collapse:collapse;}
+  .skills-table tr{border-bottom:1px solid #f2f2f2;}
+  .skills-table tr:last-child{border-bottom:none;}
+  .skills-table tr:hover{background:#fafafa;}
+  .skills-table td{padding:10px 12px;font-size:.87rem;vertical-align:top;}
+  .skills-table td:first-child{width:145px;font-weight:700;color:#111;white-space:nowrap;}
+  .skills-table td:last-child{color:#555;line-height:1.7;}
+
+  /* WHY ME */
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;}
+  .why-card{background:#f8f8f8;border-radius:8px;padding:18px;text-align:center;border:1px solid #eee;}
+  .why-card i{font-size:1.5rem;color:#18a15e;margin-bottom:10px;}
+  .why-card h4{font-size:.88rem;font-weight:700;color:#111;margin-bottom:6px;}
+  .why-card p{font-size:.79rem;color:#666;line-height:1.55;}
+
+  /* FOOTER — always at bottom, full width */
+  footer{text-align:center;padding:22px;background:#111;color:#888;font-size:.83rem;width:100%;}
+  footer a{color:#18a15e;text-decoration:none;}
+
+  @media(max-width:700px){
+    nav{padding:16px 20px;}
+    .page-wrap{flex-direction:column;}
+    .sidebar{width:100%;min-width:unset;position:static;height:auto;border-right:none;border-bottom:1px solid #eee;}
+    .main{padding:24px 18px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Port<span>fo</span>lio.</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</nav>
+
+<div class="page-outer">
+  <div class="page-wrap">
+
+    <!-- STATIC SIDEBAR -->
+    <aside class="sidebar">
+      <img src="img/profile.jpg" alt="GK"/>
+      <h2>Ganesh Krishnan</h2>
+      <div class="sidebar-divider"></div>
+      <a href="https://www.linkedin.com/in/kg13/" target="_blank" class="btn-contact">Contact Me</a>
+      <div class="sidebar-meta">
+        <div class="meta-item"><i class="fas fa-graduation-cap"></i><span>MSc Cyber Forensic &amp; Information Security</span></div>
+		<div class="meta-item"><i class="fas fa-briefcase"></i><span>15+ years Experience</span></div>
+      </div>
+    </aside>
+
+    <!-- SCROLLING MAIN CONTENT -->
+    <main class="main">
+      <div class="main-inner">
+
+        <div class="section summary">
+          <div class="section-title">Professional Summary</div>
+          <div class="section-line"></div>
+          <p>Over the past 15+ years, my journey in information security has been shaped by one consistent goal: building environments that are secure, resilient, and capable of supporting real business growth.</p>
+          <p>I started my career deep in the networking layer — routing, switching, and infrastructure troubleshooting. Over time, that foundation expanded into the broader security ecosystem: firewalls, VPNs, proxies, CASB, SASE, segmentation, load balancing, and Zero Trust architectures. Each layer added a new perspective on how modern enterprises protect their systems while maintaining performance and scalability.</p>
+          <p>Working on the Enterprise side, i translated business and regulatory requirements into practical, risk-aligned security solutions. Security is rarely just a technical decision; it sits at the intersection of risk management, compliance, operations, and business priorities. A large part of my work has involved bridging these worlds — turning governance and risk expectations into architectures that engineers can implement and businesses can rely on.</p>
+		  <p>Along the way, I have had the opportunity to work with cross-functional teams, guide technical implementations, and strengthen security posture across complex infrastructures. These experiences reinforced an important lesson: security is most effective when it is integrated into the system design rather than added as an afterthought.</p>
+		  <p>Today, my focus remains on designing secure, scalable architectures that support operational continuity while enabling organizations to move forward with confidence.</p>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Technical Skills</div>
+          <div class="section-line"></div>
+          <table class="skills-table">
+            <tr><td>Routing</td><td>OSPF, EIGRP, BGP, HSRP, VRRP, GLBP</td></tr>
+            <tr><td>Switching</td><td>VLANs, VTP, EtherChannel, Spanning Tree, Segmentation</td></tr>
+            <tr><td>Security</td><td>Cisco ASA, FTD, FMC; Palo Alto, Checkpoint, FortiGate, Juniper, VyOS</td></tr>
+            <tr><td>Load Balancers</td><td>F5 LTM/GTM, Netscaler</td></tr>
+            <tr><td>Web Filtering</td><td>Zscaler, Bluecoat, Forcepoint, SASE, SSE, PSE</td></tr>
+            <tr><td>Data Security</td><td>DLP, CASB</td></tr>
+            <tr><td>Cloud</td><td>AWS, Azure</td></tr>
+            <tr><td>DNS</td><td>Dyn, Cloudflare, AWS R53</td></tr>
+            <tr><td>Frameworks</td><td>NIST, ISO 27001, PCI DSS, MAS TRM, ZTNA</td></tr>
+            <tr><td>VPN</td><td>Site-to-Site, GRE Tunnel, SSL VPN, L2TP, PPTP, Remote Access Solution</td></tr>
+            <tr><td>GRC</td><td>Policy Review, Risk Assessment &amp; Mitigation, Gap Analysis, Technical Control Validation, Compliance Monitoring</td></tr>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Credentials</div>
+          <div class="section-line"></div>
+          <div class="cred-grid">
+            <div class="cred-item">CISSP</div><div class="cred-item">ITIL</div><div class="cred-item">JNCIA</div>
+            <div class="cred-item">SSCP</div><div class="cred-item">CompTIA Security+</div><div class="cred-item">CCSA</div>
+            <div class="cred-item">ISC2 CC</div><div class="cred-item">C|EH</div><div class="cred-item">CCNP – ASA</div>
+            <div class="cred-item">AZ900</div><div class="cred-item">ZCCA</div><div class="cred-item">CCNA Security</div>
+            <div class="cred-item">RHCSA</div><div class="cred-item">PCNSE</div><div class="cred-item">CCNA</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Who am I?</div>
+          <div class="section-line"></div>
+          <div class="why-grid">
+            <div class="why-card"><i class="fas fa-shield-halved"></i><h4>Information Security Professional</h4><p>Experienced in designing and deploying robust security solutions with strategic implementation.</p></div>
+            <div class="why-card"><i class="fas fa-network-wired"></i><h4>Network Security Proficiency</h4><p>Proficient in firewall, VPN, IDS, proxy and load balancer for resilient network environments.</p></div>
+            <div class="why-card"><i class="fas fa-eye"></i><h4>Security Practitioner</h4><p>Seasoned in delivering effective security solutions and collaborating across teams.</p></div>
+            <div class="why-card"><i class="fas fa-briefcase"></i><h4>Business-Centric</h4><p>Integrates business considerations into decisions, ensuring alignment with organisational objectives.</p></div>
+            <div class="why-card"><i class="fas fa-magnifying-glass-chart"></i><h4>Holistic Problem Solver</h4><p>Exceptional ability to approach troubleshooting holistically with unique insights.</p></div>
+            <div class="why-card"><i class="fas fa-lock"></i><h4>Cyber Security Enthusiast</h4><p>Passionate about advancing cyber defence with continuous learning.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<footer>© 2026 Ganesh "GK" Krishnan · <a href="https://www.linkedin.com/in/kg13/" target="_blank">LinkedIn</a></footer>
+
+</body>
+</html>

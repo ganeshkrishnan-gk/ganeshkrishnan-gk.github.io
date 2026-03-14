@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GK | Blog & Community</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI',sans-serif;background:#fff;color:#222;}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:18px 60px;background:#111;position:sticky;top:0;z-index:100;}
+  .logo{font-size:1.5rem;font-weight:700;color:#fff;}
+  .logo span{color:#e63946;}
+  .nav-links a{color:#ccc;text-decoration:none;margin-left:26px;font-size:.95rem;transition:.2s;}
+  .nav-links a:hover,.nav-links a.active{color:#e63946;}
+
+  .page-banner{background:linear-gradient(135deg,#0a0f2c,#1a2a6c);color:#fff;padding:60px 20px 40px;text-align:center;}
+  .page-banner h1{font-size:2.2rem;font-weight:800;}
+  .page-banner p{color:#aab4d8;margin-top:8px;font-size:1rem;}
+
+  .container{max-width:1100px;margin:0 auto;padding:40px 20px;}
+  .section-title{font-size:1.4rem;font-weight:700;color:#0a0f2c;border-left:4px solid #e63946;padding-left:12px;margin-bottom:24px;}
+
+  /* BLOG POSTS */
+  .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;margin-bottom:60px;}
+  .blog-card{background:#fff;border-radius:12px;box-shadow:0 2px 14px rgba(0,0,0,.08);overflow:hidden;transition:transform .2s;}
+  .blog-card:hover{transform:translateY(-4px);}
+  .blog-card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;background:linear-gradient(135deg,#0a0f2c,#1a2a6c);}
+  .blog-body{padding:20px;}
+  .blog-tag{display:inline-block;background:#f0f0ff;color:#4361ee;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:12px;margin-bottom:8px;text-transform:uppercase;}
+  .blog-body h3{font-size:1rem;font-weight:700;color:#0a0f2c;margin-bottom:6px;line-height:1.4;}
+  .blog-body p{font-size:.83rem;color:#666;line-height:1.6;margin-bottom:12px;}
+  .blog-meta{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:#999;}
+  .blog-link{color:#e63946;font-weight:700;text-decoration:none;font-size:.82rem;}
+  .blog-link:hover{text-decoration:underline;}
+
+  /* COMMUNITY */
+  .community-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-bottom:60px;}
+  .comm-card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 14px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:10px;transition:transform .2s;text-decoration:none;color:inherit;}
+  .comm-card:hover{transform:translateY(-4px);}
+  .comm-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;}
+  .comm-card h4{font-size:.97rem;font-weight:700;color:#0a0f2c;}
+  .comm-card p{font-size:.82rem;color:#666;line-height:1.5;}
+  .comm-link{font-size:.8rem;color:#e63946;font-weight:700;}
+
+  /* NEWSLETTER */
+  .newsletter{background:linear-gradient(135deg,#0a0f2c,#1a2a6c);border-radius:14px;padding:36px;text-align:center;color:#fff;margin-bottom:40px;}
+  .newsletter h2{font-size:1.5rem;font-weight:800;margin-bottom:8px;}
+  .newsletter p{color:#aab4d8;margin-bottom:20px;font-size:.95rem;}
+  .newsletter-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+  .newsletter-form input{padding:11px 18px;border-radius:6px;border:none;font-size:.9rem;width:280px;outline:none;}
+  .newsletter-form button{padding:11px 24px;background:#e63946;color:#fff;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:.9rem;}
+  .newsletter-form button:hover{background:#c1121f;}
+
+  footer{text-align:center;padding:24px;background:#111;color:#888;font-size:.85rem;}
+  footer a{color:#e63946;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Port<span>fo</span>lio.</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="blog.html" class="active">Blog</a>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <h1>Blog & Community</h1>
+  <p>Thoughts on cyber security, industry trends, and the communities that keep me learning.</p>
+</div>
+
+<div class="container">
+    <!-- Blurred
+  <h2 class="section-title">Blog Posts</h2>
+  <div class="blog-grid">
+
+    <div class="blog-card">
+      <div class="blog-card-img">🔥</div>
+      <div class="blog-body">
+        <span class="blog-tag">Firewall</span>
+        <h3>Why App-ID Changes Everything in Next-Gen Firewalls</h3>
+        <p>Port-based firewalls are a thing of the past. Here's why App-ID in Palo Alto fundamentally changes how we think about network security policy.</p>
+        <div class="blog-meta"><span><i class="far fa-calendar"></i> Jan 2024</span><a href="#" class="blog-link">Read More →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-img">🛡️</div>
+      <div class="blog-body">
+        <span class="blog-tag">Zero Trust</span>
+        <h3>Implementing Zero Trust in a Hybrid Enterprise: Lessons Learned</h3>
+        <p>After leading ZT initiatives at a global energy company, here are the practical lessons — including what vendors won't tell you.</p>
+        <div class="blog-meta"><span><i class="far fa-calendar"></i> Nov 2023</span><a href="#" class="blog-link">Read More →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-img">☁️</div>
+      <div class="blog-body">
+        <span class="blog-tag">Cloud Security</span>
+        <h3>Zscaler vs. Traditional Proxy: A Real-World Comparison</h3>
+        <p>Having worked with both on-prem and cloud-native proxies across multiple enterprises, here's my honest assessment.</p>
+        <div class="blog-meta"><span><i class="far fa-calendar"></i> Sep 2023</span><a href="#" class="blog-link">Read More →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-img">📡</div>
+      <div class="blog-body">
+        <span class="blog-tag">Networking</span>
+        <h3>BGP Route Leaks: How They Happen and How to Prevent Them</h3>
+        <p>BGP is the backbone of the internet, but misconfigurations can have global consequences. A practical deep-dive for network engineers.</p>
+        <div class="blog-meta"><span><i class="far fa-calendar"></i> Jul 2023</span><a href="#" class="blog-link">Read More →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-img">🔐</div>
+      <div class="blog-body">
+        <span class="blog-tag">VPN</span>
+        <h3>SSL VPN vs IPSec VPN: Which Should You Choose in 2024?</h3>
+        <p>Both have their place, but the choice isn't always obvious. Here's a framework for making the right decision for your organisation.</p>
+        <div class="blog-meta"><span><i class="far fa-calendar"></i> May 2023</span><a href="#" class="blog-link">Read More →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-img">🎓</div>
+      <div class="blog-body">
+        <span class="blog-tag">Career</span>
+        <h3>My CISSP Journey: How I Passed on the First Attempt</h3>
+        <p>The study plan, resources, and mindset shifts that helped me pass one of the most challenging certifications in cyber security.</p>
+        <div class="blog-meta"><span><i class="far fa-calendar"></i> Mar 2023</span><a href="#" class="blog-link">Read More →</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Community & External Links</h2>
+  <div class="community-grid">
+
+    <a class="comm-card" href="https://www.reddit.com/r/netsec/" target="_blank">
+      <div class="comm-icon" style="background:#ff4500;color:#fff;">🌐</div>
+      <h4>r/netsec</h4>
+      <p>Reddit's network security community — CVEs, research, and industry news.</p>
+      <span class="comm-link">Visit →</span>
+    </a>
+
+    <a class="comm-card" href="https://community.paloaltonetworks.com/" target="_blank">
+      <div class="comm-icon" style="background:#e63946;color:#fff;">🔥</div>
+      <h4>Palo Alto Community</h4>
+      <p>Official Palo Alto Networks LIVEcommunity for discussions, tips, and product Q&A.</p>
+      <span class="comm-link">Visit →</span>
+    </a>
+
+    <a class="comm-card" href="https://community.cisco.com/" target="_blank">
+      <div class="comm-icon" style="background:#1ba0d7;color:#fff;">📡</div>
+      <h4>Cisco Community</h4>
+      <p>Cisco's official community for networking, security, and collaboration discussions.</p>
+      <span class="comm-link">Visit →</span>
+    </a>
+
+    <a class="comm-card" href="https://www.isc2.org/Community" target="_blank">
+      <div class="comm-icon" style="background:#0a0f2c;color:#fff;">🏛️</div>
+      <h4>ISC2 Community</h4>
+      <p>The official ISC2 member community for CISSP, SSCP, and CC professionals.</p>
+      <span class="comm-link">Visit →</span>
+    </a>
+
+    <a class="comm-card" href="https://www.linkedin.com/groups/37511/" target="_blank">
+      <div class="comm-icon" style="background:#0077b5;color:#fff;">💼</div>
+      <h4>LinkedIn – Network Security</h4>
+      <p>One of LinkedIn's largest network security professional groups.</p>
+      <span class="comm-link">Visit →</span>
+    </a>
+
+    <a class="comm-card" href="https://owasp.org/" target="_blank">
+      <div class="comm-icon" style="background:#4361ee;color:#fff;">🔓</div>
+      <h4>OWASP</h4>
+      <p>Open source foundation for application security — guides, tools, and community.</p>
+      <span class="comm-link">Visit →</span>
+    </a>
+
+  </div>
+
+  <div class="newsletter">
+    <h2>Stay in the Loop</h2>
+    <p>Get new blog posts and resources straight to your inbox. No spam, ever.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com"/>
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+</div>
+   -->
+<footer>© 2026 Ganesh Krishnan · <a href="https://www.linkedin.com/in/kg13/" target="_blank">LinkedIn</a></footer>
+
+</body>
+</html>
